@@ -1,0 +1,27 @@
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    justify-items: center;
+    min-height: 100vh;
+    list-style: none;
+    border: 5px solid dodgerblue;
+    margin-top: -0px;
+}
+
+.single-post {
+    width: 30%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-top: 50px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0;
+}
+
+.title {
+    background-color: dodgerblue;
+    color: #fff;
+    font-size: 1.2rem;
+}
