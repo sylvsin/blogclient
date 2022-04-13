@@ -23,7 +23,7 @@ const CreatePost: React.FC = () => {
     const validationSchema = yup.object().shape({
         title: yup.string().required("Sorry, you must enter a title!"),
         postText: yup.string().required("Sorry, you must provide a text!"),
-        username: yup.string().required(),
+        username: yup.string()
     }); 
 
     let navigate = useNavigate();
