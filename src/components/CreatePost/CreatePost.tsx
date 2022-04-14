@@ -29,7 +29,7 @@ const CreatePost: React.FC = () => {
     let navigate = useNavigate();
 
     const onSubmit = (data: any) => {
-        axios.post("https://lspost.herokuapp.com/api/posts", data)
+        axios.post("https://lspost.herokuapp.com/posts", data)
         .then(resp => resp.data)
         .then(data => {
             navigate("/")

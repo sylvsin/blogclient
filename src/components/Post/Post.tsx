@@ -29,7 +29,7 @@ const Post: React.FC = () => {
     const [ newComment, setNewComment ] = useState("");
 
     const fetchPost = useCallback(() => {
-        axios.get(`https://lspost.herokuapp.com/api/posts/byId/${id}`)
+        axios.get(`https://lspost.herokuapp.com/posts/byId/${id}`)
         .then(resp => resp.data)
         .then(data => {
             // console.log(data)
@@ -42,7 +42,7 @@ const Post: React.FC = () => {
     }, [fetchPost]);
 
     const fetchComments = useCallback(() => {
-        axios.get(`https://lspost.herokuapp.com/api/comments/${id}`)
+        axios.get(`https://lspost.herokuapp.com/comments/${id}`)
         .then(resp => resp.data)
         .then(data => {
             setComments(data)
@@ -54,7 +54,7 @@ const Post: React.FC = () => {
     }, [fetchComments]);
 
     const addComment = () => {
-        axios.post(`https://lspost.herokuapp.com/api/comments/`, {commentBody: newComment, PostId: id})
+        axios.post(`https://lspost.herokuapp.com/comments/`, {commentBody: newComment, PostId: id})
         .then(resp => resp.data)
         .then(data => {
            const commentToAdd = { commentBody: newComment };
