@@ -16,12 +16,13 @@ export interface IPost {
   username: string;
 }
 
+
 const Posts: React.FC = () => {
   const [ posts, setPosts ] = useState<IPost[]>([]);
   let navigate = useNavigate(); 
 
   const fetchPosts = useCallback(() => {
-    axios.get("https://lspost.herokuapp.com/posts")
+    axios.get("https://lspost.herokuapp.com/api/posts")
     .then(resp => resp.data)
     .then(data => {
       setPosts(data)
